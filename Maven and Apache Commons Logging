@@ -1,0 +1,290 @@
+Introduction of Maven...
+
+● Each application goes through a series of processes in its life cycle, viz., building, compiling,
+documenting, etc. Developers can manually configure these processes, but it’s time-consuming
+and tedious.
+● To solve this issue, there are technologies like Apache Maven, which automates the entire
+process and makes a developer’s daily work easier and helps focus on development rather than
+configuration.
+● Apache Maven is a powerful open-source build tool made especially for Java projects which
+automates the entire process of setting up project configurations and creating a build.
+
+What is Maven?
+
+● Maven is a widely-used and popular tool to build, publish, and deploy software development
+projects.
+● It helps in managing and building a variety of Java-based projects.
+● It is based on the concept of the Project Object Model (POM), which is primarily used for
+describing the configuration, dependencies and plugins required for the building of the project.
+● Maven offers excellent interoperability by integrating plugins with IDEs such as IntelliJ and
+Eclipse and can be installed and used on any popular OS - Mac, Windows, and Ubuntu.
+● Maven has made the lives of Java developers easier while developing projects, builds, reports
+and testing automation setups.
+
+The Need for Maven..
+
+● Maven is chiefly used for Java-based projects to download dependencies, referring to the
+libraries or JAR files.
+● It fetches the correct JAR files for each project as there might be various versions of the same or
+separate packages available for download.
+● It provides tools and plug-ins that can interact with the project.
+● It provides a comprehensive, maintainable, reusable structure and a simple model for projects.
+● Downloading dependencies by visiting the official websites of different software is eliminated
+because of Maven.
+● We just need to visit "mvnrepository.com" to find various libraries in desired languages.
+● Maven also helps create the right project structure in different java modules/technologies such
+as struts, servlets, etc.
+
+What Is a Build Tool?
+
+● A maven is a Build tool; these are referred to as the tools or programs that help create an executable application.
+● The build tool compiles and packages the code into an executable form.
+● The need for build tools is discussed earlier, and its main objective is to automate the process of creating applications
+from the source code. As the name suggests, it is essential for building or scripting various tasks.
+The build tool takes care of the following processes:
+● Generation of source code
+● Generation of documentation from the source code
+● Compilation of source code
+● Packaging of the compiled code into JAR files
+● Installation of the packaged code in the local repository, remote repository/server, or central repository
+Webpack, Gulp, and Apache Ant are some of the famous build tools available in the market, and Maven is the most popular
+among all the other build tools.
+
+1. Project Object Model (POM).
+
+● Maven has gained popularity and usability due to the Project Object Model (POM), an XML file with all the information
+regarding project and configuration details such as dependencies and plugins. The POM file also has the description of
+the project and details of project versioning.
+● This POM XML file is in the project home directory. Maven searches for the POM in the current directory when it needs
+to execute any task.
+Below are some configuration that can be specified in the POM file:
+● project dependencies
+● plugins
+● goals
+● build profiles
+● project version
+● developers
+● mailing list
+
+1. Project Object Model (POM)
+
+Before creating a POM, we must first consider and decide a few things:
+● Project group (groupId),
+● Project name (artifactId)
+● Project version 
+
+2. Dependencies And Repositories
+
+● Dependencies refer to the Java libraries required for the project.
+● Example: JUnit Test library, SpringBoot Library.
+● Maven repositories refer to the directories of packaged JAR files that contain metadata.
+● The metadata actually refers to the POM files relevant to each project.
+● This metadata is what enables Maven to download dependencies.
+There are three types of repositories:
+1. Local Repository:
+2. Central Repository:
+3. Remote Repository:
+
+1. Local Repository:
+● Local repository refers to the developer’s machine/system, which is where all the project material is saved.
+● This repository contains all the dependency jars that are downloaded from the central or remote repository.
+
+2. Central Repository:
+● Maven central repository is an open source repository provided and managed by the Maven community. It contains a
+large number of commonly used libraries.
+● To browse the content of central maven repository, maven community has provided a URL:
+https://search.maven.org/#browse.
+● Using this, a developer can search all the available libraries in the central repository.
+● If and when Maven does not find any dependency in local repository, it starts searching in central repository using
+following URL: https://repo1.maven.org/maven2/
+● It is not required to be configured.
+● As it is not a directory inside the user's machine it requires internet access to be searched.
+
+3. Remote Repository:
+● The remote repository is the repository present on a web server.
+● Sometimes, Maven does not find a mentioned dependency in the central repository.
+● It stops the build process and outputs an error message to the console.
+● To prevent such a situation, Maven provides the concept of Remote Repository, which can be a
+developer's custom repository containing required libraries or other project jars, or it may be
+internal repositories set up on a file or HTTP server within your company, used to share private
+artefacts between development teams and for releases.
+● This repository works the same as the central repository. Whenever anything is required from
+the remote repository, it is first downloaded to the local repository and then used.
+
+3. Remote Repository:
+● The remote repository is the repository present on a web server.
+● Sometimes, Maven does not find a mentioned dependency in the central repository.
+● It stops the build process and outputs an error message to the console.
+● To prevent such a situation, Maven provides the concept of Remote Repository, which can be a
+developer's custom repository containing required libraries or other project jars, or it may be
+internal repositories set up on a file or HTTP server within your company, used to share private
+artefacts between development teams and for releases.
+● This repository works the same as the central repository. Whenever anything is required from
+the remote repository, it is first downloaded to the local repository and then used.
+
+3. Build Life Cycles, Phases and Goals
+
+❖ Build Life Cycles: Each Build life cycle consists of a sequence of build phases.
+❖ Build phase: Each build phase consists of a series of goals. It represents a stage in the life cycle.
+❖ Goals: Every goal is responsible for a certain task.
+
+There are precisely three built-in build lifecycles:
+
+1. default: The default lifecycle handles your project deployment
+2. clean: The clean life cycle handles project cleaning
+3. site: The site lifecycle handles the creation of your project's web site
+
+Advantages/Features of Maven:
+
+Maven has valuable and useful features, so it is more popular than other build tools. Below are some of the Maven’s
+advantages:
+● An enormous, continuously growing repository of user libraries - Maven has a huge repository of user libraries that
+contains all its project jars, plugins, and other project-specific artifacts.
+● Backwards compatible with previous versions - Maven supports all the project modules created in any version. This
+means that you can easily port the modules of a project from older versions into Maven 3 and vice versa.
+● Automatic parent versioning
+● Ensures consistent usage across all projects
+● The task of downloading dependencies and JAR files is automated
+● Strong error and integrity reporting
+● It manages all the project management processes, like building, documentation, releasing, and distribution.
+● The tool simplifies the way of project building by increasing the performance of the project and the building process
+● Maven makes it simple for the developer to build a project in different environments without worrying about the
+dependencies, processes, etc.
+● It is simple to add new dependencies; you just need to write the dependency code in the POM file.
+
+Disadvantages of Maven:
+
+● Maven needs to be installed in the working system and the Maven plug-in needs to be installed
+for the IDE.
+● If Maven code for an existing dependency is unavailable, you won’t be able to add that
+dependency using Maven.
+
+Introduction to Apache Commons Logging:
+
+● The Apache Commons Logging, also referred to as Jakarta Commons Logging (JCL), provides a
+Log interface.
+● This is a lightweight and independent abstraction of other logging toolkits.
+● It provides the middleware developer with a simple logging abstraction that allows the user
+(application developer) to plug in a specific logging implementation.
+● It is used for logging project-specific messages, information or errors.
+JCL provides below Log implementations
+● Log4J Logger
+● JDK 14 Logger
+● Simple Logger
+Log4J is the default logger for JCL, JDK 14 can be used for systems with version 14 or higher and an
+implementation of JDK 14 logging APIs is used for systems with version prior to JDK 14 also known as
+Simple logger.
+
+Configuration:
+
+The JCL logging needs to be used in combination with Commons Logging and Log implementation
+like Log4J.
+There are two base abstractions used by JCL for Log implementation:
+● Log (the basic logger)
+● LogFactory (which knows how to create Log instances).
+A particular Log implementation needs to be specified; it could either be the one provided by
+commons-logging or a user-defined one. Similarly LogFactory implementation can also be specified or
+default could be used.
+
+Apache Commons Logging Dependency in pom.xml:
+
+● The Apache Commons Logging, also referred to as Jakarta Commons Logging (JCL), provides a
+Log interface.
+● This is a lightweight and independent abstraction of other logging toolkits.
+● It provides the middleware developer with a simple logging abstraction that allows the user
+(application developer) to plug in a specific logging implementation.
+● It is used for logging project-specific messages, information or errors.
+JCL provides below Log implementations
+● Log4J Logger
+● JDK 14 Logger
+● Simple Logger
+Log4J is the default logger for JCL, JDK 14 can be used for systems with version 14 or higher and an
+implementation of JDK 14 logging APIs is used for systems with version prior to JDK 14 also known as
+Simple logger.
+
+pom.xml:  create the maven project(Stop 1)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>maven</artifactId>
+    <version>1.0-SNAPSHOT</version>
+<dependencies>
+    <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+    <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.17</version>
+    </dependency>
+
+</dependencies>
+    <properties>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+    </properties>
+
+</project>
+
+We can create the maven project(Stop 3)
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+public class CommonError {
+    private static final Log log = LogFactory.getLog(CommonError.class);
+
+        public static void main(String[] args) {
+
+            log.debug("Debug Message");
+            log.info("Information Message");
+            log.warn("Warning Message");
+            log.error("Error Message");
+            log.fatal("Fatal Message");
+            log.trace("Trace Message");
+        }
+    }
+    
+    Apache Commons Logging (Stop 4) 
+    
+    import org.apache.log4j.Level;
+    import org.apache.log4j.Logger;
+
+public class Log4gExmple {
+
+    private static final org.apache.log4j.Logger log = Logger.getLogger(Log4gExmple.class);
+
+    public static void main(String[] args) {
+        log.setLevel(Level.TRACE);
+        log.debug("Debug Message");
+        log.info("Information Message");
+        log.warn("Warning Message");
+        log.error("Error Message");
+        log.fatal("Fatal Message");
+        log.trace("Trace Message");
+
+    }}
+
+    we can add the resorces file (Stop 2)
+ 
+ commons-logging.properties 
+ 
+ org.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger
+ log4j.configuration=log4j.properties
+ 
+   log4j.properties
+   
+     log4j.rootLogger=DEBUG,stdout
+     log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+     log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+     log4j.appender.stdout.layout.ConversionPattern=%p\t%d{ISO8601}\t%r\t%c\t[%t]\t%m%n
+     
